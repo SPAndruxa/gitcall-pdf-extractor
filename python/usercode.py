@@ -1,4 +1,10 @@
-import fitz  # PyMuPDF
+import sys
+import os
+
+# 📌 Добавляем путь к локальной библиотеке
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "pymupdf_lib"))
+
+import fitz  # PyMuPDF (оно теперь загружается из локального каталога)
 import urllib.request
 import json
 from io import BytesIO
